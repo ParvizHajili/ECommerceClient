@@ -38,11 +38,11 @@ export class DeleteDirective {
 
   @HostListener('click')
   async onclick() {
-    this.spinner.show(SpinnerType.BallTrianglePath);
+    this.spinner.show(SpinnerType.BallAtom);
     const td: HTMLTableCellElement = this.element.nativeElement;
     await this.productService.delete(this.id);
     $(td.parentElement).fadeOut(500, ()=>{
       this.callback.emit();
-    });
+    })
   }
 }
