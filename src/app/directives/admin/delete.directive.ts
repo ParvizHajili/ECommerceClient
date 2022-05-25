@@ -38,11 +38,19 @@ export class DeleteDirective {
 
   @HostListener('click')
   async onclick() {
+<<<<<<< HEAD
     this.spinner.show(SpinnerType.BallAtom);
+=======
+    this.spinner.show(SpinnerType.BallTrianglePath);
+>>>>>>> 6540a0446f64d1a9a27fbd19e49f7ae430dc57d5
     const td: HTMLTableCellElement = this.element.nativeElement;
     await this.productService.delete(this.id);
     $(td.parentElement).fadeOut(500, ()=>{
       this.callback.emit();
+<<<<<<< HEAD
     })
+=======
+    });
+>>>>>>> 6540a0446f64d1a9a27fbd19e49f7ae430dc57d5
   }
 }
