@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -8,18 +9,20 @@ import { AlertifyService, MessageType, Position } from 'src/app/services/admin/a
 import { ProductService } from 'src/app/services/common/models/product.service';
 
 declare var $: any;
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> parent of 9b4a532 (Listing and Pagination of Products)
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent extends BaseComponent implements OnInit  {
+export class ListComponent implements OnInit {
 
-  constructor(spinner:NgxSpinnerService, private productService: ProductService, private alertifyService: AlertifyService) { 
-    super(spinner)
-  }
+  constructor() { }
 
+<<<<<<< HEAD
   displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate','updatedDate','edit','delete'];
   dataSource: MatTableDataSource<List_Product> = null;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -48,6 +51,9 @@ export class ListComponent extends BaseComponent implements OnInit  {
 
   async ngOnInit() {
    await this.getProducts();
+=======
+  ngOnInit(): void {
+>>>>>>> parent of 9b4a532 (Listing and Pagination of Products)
   }
 
 }
