@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
@@ -26,16 +25,6 @@
         <th mat-header-cell *matHeaderCellDef> Updated Date </th>
         <td mat-cell *matCellDef="let element"> {{element.updatedDate}} </td>
       </ng-container>
-
-      <ng-container matColumnDef="edit">
-        <th mat-header-cell *matHeaderCellDef width="30"> </th>
-        <td mat-cell *matCellDef="let element"> <img src="../../../../../assets/edit.png" width="25" height="25"> </td>
-      </ng-container>
-
-      <ng-container matColumnDef="delete">
-        <th mat-header-cell *matHeaderCellDef width="30"> </th>
-        <td [id]="element.id" mat-cell *matCellDef="let element" appDelete (callback)="getProducts()"> </td>
-      </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -48,6 +37,3 @@
     </mat-paginator>
   </div>
   
-=======
-<p>list works!</p>
->>>>>>> parent of 9b4a532 (Listing and Pagination of Products)

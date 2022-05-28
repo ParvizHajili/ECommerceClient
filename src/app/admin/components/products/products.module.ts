@@ -8,31 +8,20 @@ import { ListComponent } from './list/list.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-<<<<<<< HEAD
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { DeleteDirective } from '../../../directives/admin/delete.directive';
 
 @NgModule({
-  declarations: [ProductsComponent, CreateComponent, ListComponent,DeleteDirective],
-=======
-
-
-
-@NgModule({
-  declarations: [
-    ProductsComponent,
-    CreateComponent,
-    ListComponent
-  ],
->>>>>>> parent of 9b4a532 (Listing and Pagination of Products)
+  declarations: [ProductsComponent, CreateComponent, ListComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      { path: "", component: ProductsComponent }
-    ]),
-    MatSidenavModule, MatFormFieldModule,
-    MatInputModule, MatButtonModule
-  ]
+    RouterModule.forChild([{ path: '', component: ProductsComponent }]),
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+  ],
 })
-export class ProductsModule { }
+export class ProductsModule {}
